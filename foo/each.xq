@@ -5,7 +5,7 @@ declare namespace office="urn:oasis:names:tc:opendocument:xmlns:text:1.0";
 <ul>
 {
 for $foo  in db:open("foo")
-return $foo//text()
+return <li>{$foo//text()}</li>
 
 }
 </ul>
