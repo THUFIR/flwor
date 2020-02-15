@@ -6,8 +6,8 @@ declare namespace office="urn:oasis:names:tc:opendocument:xmlns:text:1.0";
 for $line in db:open("people")//text()
 return
       if (matches($line, "[0-9]"))
-      then <record>{$line}</record>
-      else <data>{$line}</data>
+      then <data>{$line}</data>
+      else <record>{$line}</record>
 }
 </csv>
 

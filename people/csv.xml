@@ -1,15 +1,15 @@
 <csv>
-  <data>people</data>
-  <data>joe</data>
-  <record>phone1</record>
-  <record>phone2</record>
-  <record>phone3</record>
-  <data>sue</data>
-  <record>cell4</record>
-  <record>home5</record>
-  <data>alice</data>
-  <record>atrib6</record>
-  <record>x7</record>
-  <record>y9</record>
-  <record>z10</record>
+  <record>people</record>
+  <record>joe</record>
+  <data>phone1</data>
+  <data>phone2</data>
+  <data>phone3</data>
+  <record>sue</record>
+  <data>cell4</data>
+  <data>home5</data>
+  <record>alice</record>
+  <data>atrib6</data>
+  <data>x7</data>
+  <data>y9</data>
+  <data>z10</data>
 </csv>
