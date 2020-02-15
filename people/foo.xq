@@ -5,10 +5,9 @@ declare namespace office="urn:oasis:names:tc:opendocument:xmlns:text:1.0";
 {
 for $line in db:open("people")//text()
 return
-
       if (matches($line, "[0-9]"))
-      then <li>{$line}</li>
-      else <name>{$line}</name>
+      then <ul>{$line}</ul>
+      else <li>{$line}</li>
 }
 </ul>
 
