@@ -3,7 +3,7 @@ declare namespace office="urn:oasis:names:tc:opendocument:xmlns:text:1.0";
 
 <ul>
 {
-for $line  in db:open("people")//text()[not(matches(., '[0-9]'))]
+for $line in db:open("people")//text()
 return
 
       if (matches($line, "[0-9]"))
