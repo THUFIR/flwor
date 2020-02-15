@@ -4,8 +4,8 @@ declare namespace office="urn:oasis:names:tc:opendocument:xmlns:text:1.0";
 
 <ul>
 {
-for $foo  in db:open("foo")
-return <li>{data($foo)}</li>
+for $person  in db:open("text")
+return <li>{data($person)}</li>
 
 }
 </ul>
