@@ -1,25 +1,16 @@
 $text = Get-Content -Raw ./people.csv
 [array]::Reverse($text)
 
-
 $tempAttributes = @()
 $collectionOfPeople = @()
 
-$newPerson = [PSCustomObject]@{
-  Name       = $line
-  Attributes = $tempAttributes
-}
-
-
-
-ForEach ($line in $text) {
-  $line
-  if ($line -match '[0-9]') {
+ForEach ($line in $text) { 
+  if($line -notmatch '.*?[0-9].*?') {
     $tempAttributes += $line 
-    Write-Host "woot"   
+    Write-Host "matches digits"   
   }
   else {
-    Write-Host "nope"   
+    Write-Host "no digits"   
     $newPerson = [PSCustomObject]@{
       Name       = $line
       Attributes = $tempAttributes
