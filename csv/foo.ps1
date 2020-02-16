@@ -4,19 +4,18 @@ $list = Get-Content -Raw ./people.csv
 $tempAttributes = @()
 $collectionOfPeople = @()
 
-ForEach ($line in $list) {
-  if ($line -match '[0-9]') {
-    $tempAttributes += $line    
+ForEach ($text in $list) {
+  if ($text -notmatch '[0-9]') {
+    $tempAttributes += $text    
   }
   else {
-    $foo = [PSCustomObject]@{
+    $newPerson = [PSCustomObject]@{
       Name        = $details[0]
       $Attributes = $tempAttributes
     }
     $tempAttributes = @()
-    Write-Host "----------------"
-    Write-Host $foo
+    $collectionOfPeople += $newPerson
   }
 }
 
-$list
+$collectionOfPeople.count
