@@ -3,13 +3,19 @@
 
 
 
-function yess([string]$x)
+function attribute([string]$x)
 {
-  Write-Host $x
+  Write-Host $x  "attribute"
 }
-function noo([string]$x)
+function name([string]$x)
 {
-  Write-Host $x
+
+  $newPerson = [PSCustomObject]@{
+    Name       = $line
+    Attributes = $tempAttributes
+  }
+
+  Write-Host $x  "name"
 }
 
 
@@ -17,10 +23,10 @@ function noo([string]$x)
 
 $output = switch -regex -file people.csv {
 
-  '\d' { yess($_) ; $_ }
-  default { noo($_); $_ }
+  '\d' { attribute($_) ; $_ }
+  default { name($_); $_ }
 }
 
 [array]::Reverse($output)
 
-$output
+#$output
