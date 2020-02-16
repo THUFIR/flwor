@@ -18,9 +18,6 @@ function name([string]$line) {
   $tempAttributes = @()
 }
 
-
-
-
 $output = switch -regex -file people.csv {
 
   '\d' { attribute($_) ; $_ }
