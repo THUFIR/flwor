@@ -21,7 +21,7 @@ ForEach ($person in $people) {
 
   if ($person -match '[0-9]') {
     Write-host $person
-    $myAttributes += $person
+    #$myAttributes += $person
   }
   else { 
     write-host "new person"
@@ -32,7 +32,7 @@ ForEach ($person in $people) {
 
     $diff = 4 - $myArray.Count
     for ($i = 0; $i -lt 4; $i++) {
-      $myArray[$i] = "null"
+   #   $myArray[$i] = "null"
     }
     for ($i = 0; $i -lt $myArray.Count; $i++) {
 
