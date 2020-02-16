@@ -20,7 +20,7 @@ ForEach ($line in $raw) {
   }
   else {
     Write-Host "######"
-    $tempPerson.Attribute = $tempAttributes
+    $tempPerson.name = $line
     $arrayOfPeople += $tempPerson
     $tempPerson = [OnePerson]::new()
     $tempAttributes = @()
