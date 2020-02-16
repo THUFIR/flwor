@@ -21,6 +21,7 @@ ForEach ($line in $raw) {
   else {
     Write-Host "######"
     $tempPerson.name = $line
+    $tempPerson.Attribute = $tempAttributes
     $collectionOfPeople += $tempPerson
     $tempPerson = [OnePerson]::new()
     $tempAttributes = @()
