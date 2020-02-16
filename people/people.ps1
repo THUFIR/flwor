@@ -27,6 +27,6 @@ ForEach ($line in $raw) {
     $tempAttributes = @()
   }
 
-  $collectionOfPeople[0]
+  $collectionOfPeople[0].Attribute
 
 }
