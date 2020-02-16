@@ -2,10 +2,13 @@
 
 
 
+$tempAttributes = @()
+$collectionOfPeople = @()
 
 function attribute([string]$x)
 {
   Write-Host $x  "attribute"
+  $tempAttributes += $x
 }
 function name([string]$x)
 {
