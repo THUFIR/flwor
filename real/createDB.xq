@@ -1,4 +1,4 @@
-let $database := "blgdfmbljm"
+let $database := "xxx"
 for $name in file:list('.', false(), '*.json')
 let $file := file:read-text($name)
 let $json := json:parse($file)
