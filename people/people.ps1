@@ -3,13 +3,11 @@ $people = import-csv "./people.csv"
 
 $tempAttributes = @()
 
-
-
 class OnePerson {
   [string[]] $Attribute
 }
 
-
+$foo =[OnePerson]::new()
 
 ForEach ($person in $people) {
   $tempAttributes += $person
@@ -17,5 +15,8 @@ ForEach ($person in $people) {
     write-host "---------------"
     $tempAttributes    
     $tempAttributes = @()
+  }else {
+    Write-Host "######"
   }
+
 }
