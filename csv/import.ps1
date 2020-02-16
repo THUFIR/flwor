@@ -7,7 +7,6 @@ function attribute([string]$line) {
 #  Write-Host $tempAttributes
 }
 function name([string]$line) {
-
   $newPerson = [PSCustomObject]@{
     Name       = $line
     Attributes = $tempAttributes
@@ -15,8 +14,9 @@ function name([string]$line) {
 
   # Write-Host $line  "name"
 #  Write-Host $tempAttributes
-  $newPerson.Name = $line
-  $newPerson.Attributes = $tempAttributes
+  #$newPerson.Name = $line
+  #$newPerson.Attributes = $tempAttributes
+  $newPerson
   $collectionOfPeople += $newPerson
   $tempAttributes = @()
 }
