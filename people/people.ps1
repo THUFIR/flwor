@@ -1,22 +1,25 @@
 $people = import-csv "./people.csv"
-[array]::Reverse($people)
-
-$tempAttributes = @()
+#$people = [array]::Reverse($people)
 
 class OnePerson {
   [string[]] $Attribute
 }
 
+$tempAttributes = @()
+
+
 $foo =[OnePerson]::new()
 
-ForEach ($person in $people) {
-  $tempAttributes += $person
-  if ($person -match '[0-9]') {
+ForEach ($line in $people) {
+  $tempAttributes += $line
+  if ($line -match '[0-9]') {
     write-host "---------------"
-    $tempAttributes    
+    $tempAttributes += $line    
     $tempAttributes = @()
   }else {
     Write-Host "######"
   }
+
+$people
 
 }
