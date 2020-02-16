@@ -8,7 +8,7 @@ class OnePerson {
 
 $tempAttributes = @()
 
-$arrayOfPeople = @()
+$collectionOfPeople = @()
 
 
 $tempPerson = [OnePerson]::new()
@@ -21,11 +21,11 @@ ForEach ($line in $raw) {
   else {
     Write-Host "######"
     $tempPerson.name = $line
-    $arrayOfPeople += $tempPerson
+    $collectionOfPeople += $tempPerson
     $tempPerson = [OnePerson]::new()
     $tempAttributes = @()
   }
 
-  $arrayOfPeople[0]
+  $collectionOfPeople[0]
 
 }
