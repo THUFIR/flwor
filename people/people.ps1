@@ -29,6 +29,6 @@ ForEach ($line in $list) {
     $tempAttributes = @()
   }
 
-  $collectionOfPeople[0].name
+  $collectionOfPeople[1].name
   #$collectionOfPeople[0].Attribute
 }
