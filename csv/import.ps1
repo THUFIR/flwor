@@ -2,21 +2,18 @@ $tempAttributes = @()
 $collectionOfPeople = @()
 
 function attribute([string]$line) {
-  #Write-Host $line  "attribute"
+  Write-Host $line  "attribute"
   $tempAttributes += $line
-#  Write-Host $tempAttributes
 }
 function name([string]$line) {
+  Write-Host $line  "name"
+
+  #is a $newPerson ever instantiated?
   $newPerson = [PSCustomObject]@{
     Name       = $line
     Attributes = $tempAttributes
   }
-
-  # Write-Host $line  "name"
-#  Write-Host $tempAttributes
-  #$newPerson.Name = $line
-  #$newPerson.Attributes = $tempAttributes
-  $newPerson
+  $newPerson  #empty?  no output
   $collectionOfPeople += $newPerson
   $tempAttributes = @()
 }
@@ -34,4 +31,4 @@ $output = switch -regex -file people.csv {
 
 #$output
 
-$collectionOfPeople
+$collectionOfPeople  #empty???
