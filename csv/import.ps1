@@ -1,24 +1,24 @@
-
-
-
-
 $tempAttributes = @()
 $collectionOfPeople = @()
 
-function attribute([string]$x)
-{
-  Write-Host $x  "attribute"
-  $tempAttributes += $x
+function attribute([string]$line) {
+  #Write-Host $line  "attribute"
+  $tempAttributes += $line
+#  Write-Host $tempAttributes
 }
-function name([string]$x)
-{
+function name([string]$line) {
 
   $newPerson = [PSCustomObject]@{
     Name       = $line
     Attributes = $tempAttributes
   }
 
-  Write-Host $x  "name"
+  # Write-Host $line  "name"
+#  Write-Host $tempAttributes
+  $newPerson.Name = $line
+  $newPerson.Attributes = $tempAttributes
+  $collectionOfPeople += $newPerson
+  $tempAttributes = @()
 }
 
 
@@ -29,7 +29,9 @@ $output = switch -regex -file people.csv {
   '\d' { attribute($_) ; $_ }
   default { name($_); $_ }
 }
-
-[array]::Reverse($output)
+#how to read the file from top to bottom?
+#[array]::Reverse($output)
 
 #$output
+
+$collectionOfPeople
