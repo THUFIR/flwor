@@ -4,17 +4,21 @@ $text = Get-Content -Raw ./people.csv
 $tempAttributes = @()
 $collectionOfPeople = @()
 
+$newPerson = [PSCustomObject]@{
+  Name       = $line
+  Attributes = $tempAttributes
+}
+
 ForEach ($line in $text) {
   if ($line -notmatch '[0-9]') {
     $tempAttributes += $line    
   }
   else {
-    $tempAttributes   
-    $newPerson = [PSCustomObject] {
-      Name        = $line
-      Attributes  = $tempAttributes
+    $newPerson = [PSCustomObject]@{
+      Name       = $line
+      Attributes = $tempAttributes
     }
-    Write-Host $newPerson
+    $newPerson
     $tempAttributes = @()
     $collectionOfPeople += $newPerson
   }
