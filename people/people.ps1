@@ -1,6 +1,8 @@
 $list = import-csv "./people.csv"
 [array]::Reverse($list)
 
+#$list
+
 class OnePerson {
   [string] $name
   [string[]] $Attribute
