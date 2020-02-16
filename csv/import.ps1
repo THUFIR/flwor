@@ -11,12 +11,13 @@ ForEach ($line in $text) {
   else {
     $tempAttributes   
     $newPerson = [PSCustomObject] {
-      Name        = $details[0]
+      Name        = $line
       Attributes  = $tempAttributes
     }
+    Write-Host $newPerson
     $tempAttributes = @()
     $collectionOfPeople += $newPerson
   }
 }
 
-$collectionOfPeople
+#$collectionOfPeople
