@@ -2,6 +2,7 @@ $raw = import-csv "./people.csv"
 [array]::Reverse($raw)
 
 class OnePerson {
+  [string] $name
   [string[]] $Attribute
 }
 
