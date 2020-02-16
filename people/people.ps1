@@ -30,5 +30,5 @@ ForEach ($line in $list) {
   }
 
   $collectionOfPeople[1].name
-  #$collectionOfPeople[0].Attribute
+  $collectionOfPeople[1].Attribute
 }
