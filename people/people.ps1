@@ -1,5 +1,5 @@
-$raw = import-csv "./people.csv"
-[array]::Reverse($raw)
+$list = import-csv "./people.csv"
+[array]::Reverse($list)
 
 class OnePerson {
   [string] $name
@@ -13,7 +13,7 @@ $collectionOfPeople = @()
 
 $tempPerson = [OnePerson]::new()
 
-ForEach ($line in $raw) {
+ForEach ($line in $list) {
   $tempAttributes += $line    
   if ($line -match '[0-9]') {
     write-host "---------------"
@@ -27,6 +27,6 @@ ForEach ($line in $raw) {
     $tempAttributes = @()
   }
 
-  $collectionOfPeople[0].Attribute
-
+  $collectionOfPeople[0].name
+  #$collectionOfPeople[0].Attribute
 }
