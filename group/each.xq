@@ -1,4 +1,5 @@
 xquery version "3.0";
 
 for $line in db:open("people")
-return $line/text/line[3]
+for $index at $count in $line/text/line
+return $count
