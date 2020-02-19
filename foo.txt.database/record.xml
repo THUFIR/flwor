@@ -6,9 +6,9 @@ for tumbling window $line in db:open("foo.txt")//text()
 start $s when matches($s, '[0-9]')
 return   
 <record>
-{
+
        <person data="name">{$line}</person>
-}
+
  </record>
 }
  </xml>
