@@ -4,8 +4,10 @@ xquery version "3.0";
 {
 for $line in db:open("foo.txt")//text()
 return
+	<record>
       if (matches($line, "[0-9]"))
       then <data>{$line}</data>
-      else <record>{$line}</record>
+      else <name>{$line}</name>
+	</record>
 }
 </xml>
