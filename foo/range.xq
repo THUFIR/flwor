@@ -1,1 +1,1 @@
-db:open("json_people")/json/_[position() = 99 to 199]
+db:open("foo_json")/json/_[position() = 2 to 2]
