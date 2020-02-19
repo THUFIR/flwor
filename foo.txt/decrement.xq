@@ -1,9 +1,13 @@
 xquery version "3.0";
 
 let $y := 99
+let $z := 0
 
 for $x in (1 to 9)
- let $y := $y - 1
-let $z := $y - 2
+count $iterator
+let $y := $x - $iterator
+let $z := $z - $iterator
 
 return <xyz x='{$x}' y='{$y}' z='{$z}' />
+
+
