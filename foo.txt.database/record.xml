@@ -2,7 +2,7 @@ xquery version "3.0";
 
 <xml>
 {
-for $line in db:open("foo.txt")//text()
+for tumbling window in $line in db:open("foo.txt")//text()
 return   
 <record>
 {
