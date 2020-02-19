@@ -2,13 +2,12 @@ xquery version "3.0";
 
 <xml>
 {
-for tumbling window in $line in db:open("foo.txt")//text()
+for tumbling window $line in db:open("foo.txt")//text()
+start $s when matches($s, '[0-9]')
 return   
 <record>
 {
-       if (matches($line, "[0-9]"))
-       then <person data="phone">{$line}</person>
-       else <person data="name">{$line}</person>
+       <person data="name">{$line}</person>
 }
  </record>
 }
