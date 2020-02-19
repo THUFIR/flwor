@@ -1,5 +1,4 @@
 xquery version "3.0";
-for $x in doc("books.xml")/books/book
-where $x/price>30
-return $x/title
+for $x in doc("foo.txt.xml")
+return $x
 
