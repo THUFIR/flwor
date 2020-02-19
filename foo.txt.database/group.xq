@@ -1,13 +1,22 @@
 for $line in db:open("foo.txt")
-count $id
 
 
-
-where (matches($line, "[0-9]"))
 
 
 return
+if (matches($line, "[0-9]")) then
+{
+
 <result>
 {$line}
 </result>
 
+}
+
+else
+
+{
+<result>
+{$line}
+</result>
+}
