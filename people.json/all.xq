@@ -1,6 +1,6 @@
 xquery version "3.0";
 
-<csv>
+<xml>
 {
 for $line in db:open("people.json")//text()
 return
@@ -8,5 +8,4 @@ return
       then <data>{$line}</data>
       else <record>{$line}</record>
 }
-</csv>
-
+</xml>
