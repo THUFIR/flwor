@@ -1,12 +1,14 @@
 xquery version "3.0";
 
 
+
 <xml>
 
 {
+variable $x:=0;
+
 for $line in db:open("foo.txt")//text()
 
-let $x := 0
 
 count $id
 
