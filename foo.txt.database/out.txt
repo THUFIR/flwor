@@ -1,6 +1,0 @@
-
-<record>
-    <name>joe</name>
-    <data>phone1</data>
-    <data>phone2</data>
-</record> 
