@@ -13,3 +13,13 @@ return $x
 
 
 
+let $items := (1,2,3,4,5,6)
+let $new-items := reverse($items)
+return
+<result>
+<items>
+{
+for $item in $new-items
+return <item>{$item}</item>
+}
+</items>
