@@ -11,16 +11,16 @@ for $csv in doc("foo.grouped.xml")
 
 for $p in $csv/xml/person
 
-let $name := $p/name
-let $data := $p/data
-let $reverse := reverse($data)
+let $n := $p/name
+let $d := $p/data
+let $r := reverse($d)
 
 return 
 
 <record>
 {
 
-($name,$reverse)
+($n,$r)
 
 }
 </record>
