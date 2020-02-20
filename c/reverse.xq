@@ -5,11 +5,11 @@ declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
 declare option output:method 'xml';
 declare option output:indent 'yes';
 
+<xml>
+{    
+for $csv in db:open("people.flat.record.xml")
 
-    
-for $csv in db:open("foo.grouped.xml")
-
-for $p in $csv/xml/person
+for $p in $csv/xml/record
 
 let $n := $p/name
 let $d := $p/data
@@ -24,5 +24,5 @@ return
 
 }
 </record>
-
-
+}
+</xml>
