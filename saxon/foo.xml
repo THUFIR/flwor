@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <text>
   <line>people</line>
   <line>joe</line>
@@ -6,8 +5,12 @@
   <line>phone2</line>
   <line>phone3</line>
   <line>sue</line>
+  <line/>
   <line>cell4</line>
+  <line/>
   <line>home5</line>
+  <line/>
+  <line>ph3</line>
   <line>alice</line>
   <line>atrib6</line>
   <line>x7</line>
