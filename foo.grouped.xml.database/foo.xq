@@ -1,8 +1,10 @@
 xquery version "3.0";
 
+let $y := ""
+
 for $x in db:open("foo.txt")/text/line
 
-return if($x = "")
-	then <null_to_delete>{$x}</null_to_delete>
-	else <keep>{$x}</keep>
-
+return if($x = "") then 
+		($y)
+	else 
+		($x)
