@@ -9,7 +9,7 @@ declare option output:indent 'yes';
 
 <xml>
 {
-    for tumbling window $person in db:open("people.flat.xml")
+    for tumbling window $person in db:open("people.flat.xml")/xml/line
     start $name next $data when matches($name, '^[^0-9]+$') and matches($data, '[0-9]')
     return
         <person>
