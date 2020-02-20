@@ -1,0 +1,21 @@
+<xml>
+  <person>
+    <name>joe</name>
+    <data>phone1</data>
+    <data>phone2</data>
+    <data>phone3</data>
+  </person>
+  <person>
+    <name>sue</name>
+    <data>cell4</data>
+    <data>home5</data>
+  </person>
+  <person>
+    <name>alice</name>
+    <data>atrib6</data>
+    <data>x7</data>
+    <data>y9</data>
+    <data>z10</data>
+  </person>
+</xml>
+

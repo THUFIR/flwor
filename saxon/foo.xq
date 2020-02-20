@@ -1,23 +1,28 @@
 xquery version "3.0";
 
-
 declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
 
 declare option output:method 'xml';
 declare option output:indent 'yes';
 
-<csv>
-{
-    for tumbling window $person in doc("foo.xml")/text/line[node()]
-    start $name next $data when matches($name, '^[^0-9]+$') and matches($data, '[0-9]')
-    return
-        <record>
-        {
-            <name>{ data($name) }</name>,
-            tail($person) ! <data>{data()}</data>
 
-        }
-        </record>
-}    
-</csv>
+    
+for $csv in doc("foo.grouped.xml")
+
+for $p in $csv/xml/person
+
+let $n := $p/name
+let $d := $p/data
+let $r := reverse($d)
+
+return 
+
+<record>
+{
+
+($n,$r)
+
+}
+</record>
+
 
