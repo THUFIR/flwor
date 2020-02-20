@@ -1,0 +1,17 @@
+people
+joe
+phone1
+phone2
+phone3
+sue
+
+cell4
+
+home5
+
+ph3
+alice
+atrib6
+x7
+y9
+z10
