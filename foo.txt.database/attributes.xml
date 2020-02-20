@@ -1,0 +1,16 @@
+<xml>
+  <person id="1" x="x" numerical="false">people</person>
+  <person id="2" x="x" numerical="false">joe</person>
+  <person id="3" x="x" numerical="true">phone1</person>
+  <person id="4" x="x" numerical="true">phone2</person>
+  <person id="5" x="x" numerical="true">phone3</person>
+  <person id="6" x="x" numerical="false">sue</person>
+  <person id="7" x="x" numerical="true">cell4</person>
+  <person id="8" x="x" numerical="true">home5</person>
+  <person id="9" x="x" numerical="false">alice</person>
+  <person id="10" x="x" numerical="true">atrib6</person>
+  <person id="11" x="x" numerical="true">x7</person>
+  <person id="12" x="x" numerical="true">y9</person>
+  <person id="13" x="x" numerical="true">z10</person>
+</xml>
+
