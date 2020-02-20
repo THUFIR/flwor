@@ -9,5 +9,6 @@ declare option output:indent 'yes';
     
 for $csv in db:open("foo.grouped.xml")
 
+for $p in $csv/xml/person
 
-return $csv/xml/person
+return $p
