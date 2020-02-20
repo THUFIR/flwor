@@ -4,7 +4,23 @@ declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
 
 declare option output:method 'xml';
 declare option output:indent 'yes';
-    
-for $x in db:open("people.flat.xml")
 
-return $x
+
+
+<xml>
+{
+    for tumbling window $person in db:open("people.flat.xml")
+    start $name next $data when matches($name, '^[^0-9]+$') and matches($data, '[0-9]')
+    return
+        <person>
+        {
+            <name>{ data($name) }</name>,
+            tail($person) ! <data>{data()}</data>
+
+        }
+        </person>
+}    
+</xml>
+
+
+    
