@@ -13,5 +13,6 @@ for $p in $csv/xml/person
 
 let $n := $p/name
 let $d := $p/data
+let $r := reverse($d)
 
-return ($n,$d)
+return ($n,$r)
