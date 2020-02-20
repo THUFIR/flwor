@@ -27,7 +27,7 @@ declare variable $XML :=
 
 <xml>
 {
-    for tumbling window $person in $XML//line
+    for tumbling window $person in db:open("foo.txt")//text()
     start $name next $data when matches($name, '^[^0-9]+$') and matches($data, '[0-9]')
     return
         <person>
