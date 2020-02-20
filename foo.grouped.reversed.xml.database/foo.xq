@@ -18,7 +18,7 @@ return
 <record>
 {
 
-($n,$r)
+($n,<x/>)
 
 }
 </record>
