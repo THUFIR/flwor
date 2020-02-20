@@ -11,4 +11,7 @@ for $csv in db:open("foo.grouped.xml")
 
 for $p in $csv/xml/person
 
-return $p
+let $n := $p/name
+let $d := $p/data
+
+return ($n,$d)
