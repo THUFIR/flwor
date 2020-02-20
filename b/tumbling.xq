@@ -12,13 +12,13 @@ declare option output:indent 'yes';
     for tumbling window $person in db:open("people.flat.xml")/xml/line
     start $name next $data when matches($name, '^[^0-9]+$') and matches($data, '[0-9]')
     return
-        <person>
+        <record>
         {
             <name>{ data($name) }</name>,
             tail($person) ! <data>{data()}</data>
 
         }
-        </person>
+        </record>
 }    
 </xml>
 
