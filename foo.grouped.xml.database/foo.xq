@@ -6,7 +6,7 @@ declare option output:method 'xml';
 declare option output:indent 'yes';
 
     
-for $x in db:open("foo.txt")
+for $x in db:open("foo.grouped.xml")
 
 return $x
 
